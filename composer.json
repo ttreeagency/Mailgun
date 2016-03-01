@@ -1,0 +1,14 @@
+{
+    "name": "ttree/mailgun",
+    "type": "typo3-flow-package",
+    "description": "Add description here",
+    "require": {
+        "typo3/flow": "~2.3",
+        "mailgun/mailgun-php": "^1.8"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ttree\\Mailgun": "Classes"
+        }
+    }
+}
