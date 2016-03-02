@@ -23,6 +23,7 @@ use TYPO3\Flow\Annotations as Flow;
 class ClientFactory implements ClientFactoryInterface
 {
     /**
+     * @Flow\Inject
      * @var KeyServiceInterface
      */
     protected $keyService;
