@@ -19,5 +19,10 @@ interface KeyServiceInterface
     /**
      * @return string
      */
-    public function get();
+    public function getPrivateKey();
+
+    /**
+     * @return string
+     */
+    public function getPublicKey();
 }

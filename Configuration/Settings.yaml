@@ -9,4 +9,5 @@ TYPO3:
 
 Ttree:
   Mailgun:
-    key: 'set-your-own-api-key'
+    privateKey: 'key-use-your-own'
+    publicKey: 'pubkey-use-your-own'

@@ -29,10 +29,12 @@ class ClientFactory implements ClientFactoryInterface
     protected $keyService;
 
     /**
+     * @param boolean $usePrivateKey
      * @return Mailgun
      */
-    public function create()
+    public function create($usePrivateKey = true)
     {
-        return new Mailgun($this->keyService->get());
+        $key = $usePrivateKey ? $this->keyService->getPrivateKey() : $this->keyService->getPublicKey();
+        return new Mailgun($key);
     }
 }

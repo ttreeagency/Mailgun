@@ -21,16 +21,30 @@ use TYPO3\Flow\Annotations as Flow;
 class KeyService implements KeyServiceInterface
 {
     /**
-     * @Flow\Inject(setting="key", package="Ttree.Mailgun")
+     * @Flow\Inject(setting="privateKey", package="Ttree.Mailgun")
      * @var string
      */
-    protected $key;
+    protected $privateKey;
+
+    /**
+     * @Flow\Inject(setting="publicKey", package="Ttree.Mailgun")
+     * @var string
+     */
+    protected $publicKey;
 
     /**
      * @return string
      */
-    public function get()
+    public function getPrivateKey()
     {
-        return $this->key;
+        return $this->privateKey;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublicKey()
+    {
+        return $this->publicKey;
     }
 }
